@@ -1,5 +1,8 @@
 const express = require('express');
 const parser = require('body-parser');
+const Movie = require('./models/Movie');
+const movieRouter = require('./handlers/moviesRouter.js');
+const path = require('path');
 
 // create connection to database
 require('./handlers/dataConnector.js').connect();
@@ -15,13 +18,12 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
 // root endpoint will retrieve all paintings
-app.get("/", (req, resp) => {
-    //provider.xyz(req, resp);
+app.get('/', function (req, res) {
+    res.send('')
 });
 
-
 // use the route handlers
-
+movieRouter.handleAllMovies(app, Movie);
 
 // customize the 404 error with our own middleware function
 app.use(function (req, res, next) {
