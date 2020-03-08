@@ -2,7 +2,7 @@
   "name": "mern-fullstack",
   "version": "1.0.0",
   "description": "MERN FULL STACK Web Application (MongoDB, Express.js, React.js, Node.js) ",
-  "main": "index.js",
+  "main": "mern-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
