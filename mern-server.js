@@ -24,6 +24,13 @@ app.get('/', function (req, res) {
 
 // use the route handlers
 movieRouter.handleAllMovies(app, Movie);
+movieRouter.handleSingleMovie(app, Movie);
+movieRouter.handleAllMoviesBrief(app, Movie);
+movieRouter.handleAllMoviesTitleRegex(app, Movie);
+movieRouter.handleAllMoviesYear(app, Movie);
+movieRouter.handleAllMoviesRating(app, Movie);
+
+
 
 // customize the 404 error with our own middleware function
 app.use(function (req, res, next) {
