@@ -1,0 +1,31 @@
+{
+  "name": "mern-fullstack",
+  "version": "1.0.0",
+  "description": "MERN FULL STACK Web Application (MongoDB, Express.js, React.js, Node.js) ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AttitudeFever/MERN-FullStack.git"
+  },
+  "keywords": [
+    "MERN",
+    "FullStack",
+    "Web",
+    "Api"
+  ],
+  "author": "Hamid Hemani and Mark Carvallho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AttitudeFever/MERN-FullStack/issues"
+  },
+  "homepage": "https://github.com/AttitudeFever/MERN-FullStack#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3",
+    "nodemon": "^2.0.2"
+  }
+}
