@@ -10,7 +10,7 @@ const path = require('path');
 require('./handlers/dataConnector.js').connect();
 // create an express app
 const app = express();
-let port = 8080;
+let port = process.env.PORT || 8080;
 app.listen(port, function () {
     console.log("Server running at port= " + port);
 });
