@@ -16,34 +16,33 @@ const handleAllFavorite = (app, Favorite) => {
 
         .post(function (req, resp) {
             // use mongoose to insert favorite item through MongoDB
-            var itemToAdd = {id:"", title:"", poster:""};
-            Favorite.insertOne(itemToAdd, function (err, res) {
-                if (err) {
-                    throw err
-                } else {
-                    // close connection
-                    console.log("1 favorite document inserted");
-                    db.close();
-                }
+            const id = req.body.id
+            const title = req.body.title
+            const poster = req.body.poster
+            const newFavorite = new Favorite({
+                id,
+                title,
+                poster,
             });
-        })
 
+            newFavorite.save()
+            .then( () => resp.json('Favorite Item Added !'))
+            .catch(err => resp.status(400).json('Error: ' + err));
+        })
+};
+
+// handle GET requests for [domain]/api/favorites/delete/13 - delete particular item
+const handleFavoriteDelete = (app, Favorite) => {
+    app.route('/api/favorites/delete/:id')
         .delete(function (req, resp) {
             // use mongoose to delete favorite item through MongoDB
-            var itemToDelete = { id: '' };
-            Favorite.deleteOne(itemToDelete, function (err, res) {
-                if (err) {
-                    throw err
-                } else {
-                    // close connection
-                    console.log("1 avorite document deleted");
-                    db.close();
-                }
-            });
+            Favorite.deleteOne({id: req.params.id})
+                .then(() => resp.json('Favorite Item Deleted !'))
+                .catch(err => resp.status(400).json('Error: ' + err));
         });
-
 };
 
 module.exports = {
-    handleAllFavorite
+    handleAllFavorite,
+    handleFavoriteDelete
 }

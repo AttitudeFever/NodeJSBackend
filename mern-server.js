@@ -5,9 +5,11 @@ const movieRouter = require('./handlers/moviesRouter.js');
 const favoriteRouter = require('./handlers/favoritesRouter.js');
 const Favorite = require('./models/Favorite');
 const path = require('path');
+const db = require('./handlers/dataConnector.js');
 
 // create connection to database
-require('./handlers/dataConnector.js').connect();
+//require('./handlers/dataConnector.js').connect();
+db.connect();
 // create an express app
 const app = express();
 let port = process.env.PORT || 8080;
@@ -41,6 +43,7 @@ movieRouter.handleAllMoviesRating(app, Movie);
 
 // use the route handlers for favorites
 favoriteRouter.handleAllFavorite(app, Favorite);
+favoriteRouter.handleFavoriteDelete(app, Favorite);
 
 // customize the 404 error with our own middleware function
 app.use(function (req, res, next) {
