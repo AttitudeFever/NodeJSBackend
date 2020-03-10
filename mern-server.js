@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 });
 
 // root endpoint will retrieve all paintings
-app.get('*', function (req, res) {
+app.get('/', function (req, res) {
     res.send('')
 });
 
