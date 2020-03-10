@@ -4,7 +4,8 @@
   "description": "MERN FULL STACK Web Application (MongoDB, Express.js, React.js, Node.js) ",
   "main": "mern-server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node mern-server.js"
   },
   "repository": {
     "type": "git",
