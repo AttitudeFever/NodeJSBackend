@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "MERN FULL STACK Web Application (MongoDB, Express.js, React.js, Node.js) ",
   "engines": {
-    "node": "12.13.1"
+    "node": "12.13.1",
+    "npm" : "6.12.1"
     },
   "main": "mern-server.js",
   "scripts": {
