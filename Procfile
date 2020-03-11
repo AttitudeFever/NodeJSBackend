@@ -1,1 +1,1 @@
-web:node mern-server.js
+web: node mern-server.js
