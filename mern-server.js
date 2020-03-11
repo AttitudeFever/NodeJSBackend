@@ -1,9 +1,9 @@
 const express = require('express');
 const parser = require('body-parser');
-const Movie = require('./models/Movie.js');
+const Movie = require('./models/movie.js');
 const movieRouter = require('./handlers/moviesRouter.js');
 const favoriteRouter = require('./handlers/favoritesRouter.js');
-const Favorite = require('./models/Favorite.js');
+const Favorite = require('./models/favorite.js');
 const path = require('path');
 const db = require('./handlers/dataConnector.js');
 
