@@ -4,8 +4,8 @@
   "description": "MERN FULL STACK Web Application (MongoDB, Express.js, React.js, Node.js) ",
   "engines": {
     "node": "12.13.1",
-    "npm" : "6.12.1"
-    },
+    "npm": "6.12.1"
+  },
   "main": "mern-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,9 +28,17 @@
   },
   "homepage": "https://github.com/AttitudeFever/MERN-FullStack#readme",
   "dependencies": {
+    "bcrypt": "^4.0.1",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.0",
     "mongoose": "^5.9.3",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   }
 }
